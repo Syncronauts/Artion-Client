@@ -33,7 +33,7 @@ const cards = [
     icon: card2,
     title: 'Super Fast',
     description:
-      'Since Artion runs on the Fantom Opera Network, transactions are usually confirmed within 1-2 seconds.',
+      'Since NeonRain runs on the Ethereum Network, transactions are usually confirmed within a few seconds.',
     path: '/',
   },
   {
@@ -47,7 +47,7 @@ const cards = [
     icon: card4,
     title: 'Zero Platform Fees',
     description:
-      'Trade NFTs via auction or direct offer without any fees taken by Artion.',
+      'Trade NFTs via auction or direct offer without any fees taken by NeonRain.',
     path: '/explore',
   },
 ];
@@ -105,9 +105,9 @@ const LandingPage = () => {
             <div
               className={styles.title}
               style={{ color: '#FFF' }}
-            >{`Trade without platform fees on Artion`}</div>
+            >{`Trade without platform fees on NeonRain`}</div>
             <div className={styles.subtitle}>
-              Artion is an NFT marketplace built on Fantom. Create and trade
+              NeonRain is an NFT marketplace built on Ethereum. Create and trade
               NFTs instantly with low network costs.
             </div>
             <div className={styles.subtitle}>
@@ -153,7 +153,7 @@ const LandingPage = () => {
       </div>
       <div className={styles.about}>
         <div className={styles.aboutInner}>
-          <div className={styles.aboutTitle}>Why Artion</div>
+          <div className={styles.aboutTitle}>Why NeonRain</div>
           <div className={styles.aboutCards}>
             {cards.map((card, key) =>
               renderAboutCard(

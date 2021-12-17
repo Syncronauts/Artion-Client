@@ -91,7 +91,7 @@ import mediumIcon from 'assets/svgs/medium.svg';
 import filterIcon from 'assets/svgs/filter.svg';
 import checkIcon from 'assets/svgs/check.svg';
 import shareIcon from 'assets/svgs/share.svg';
-import iconArtion from 'assets/svgs/logo_small_blue.svg';
+import iconNeonRain from 'assets/svgs/logo_small_blue.svg';
 import iconFacebook from 'assets/imgs/facebook.png';
 import iconTwitter from 'assets/svgs/twitter_blue.svg';
 
@@ -3708,7 +3708,7 @@ const NFTItem = () => {
       >
         <CopyToClipboard text={window.location.href} onCopy={handleCopyLink}>
           <MenuItem classes={{ root: styles.menuItem }}>
-            <img src={iconArtion} />
+            <img src={iconNeonRain} />
             Copy Link
           </MenuItem>
         </CopyToClipboard>
