@@ -18,7 +18,32 @@ body {
 }
 
 body * {
-  font-family: 'proxima-nova' !important;
+  font-family: 'Montserrat' !important;
+}
+
+h1,h2,h3,h4,h5,h6,a,button {
+  font-family: 'Poppins' !important;
+}
+
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 21px;
+}
+
+button {
+  outline: none;
+  border: none;
 }
 
 /* width */

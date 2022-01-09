@@ -585,7 +585,7 @@ const PaintBoard = () => {
               </Stepper>
             </div>
           )}
-          <div
+          <button
             className={cx(
               styles.button,
               (isMinting || !account || !validateMetadata()) && styles.disabled
@@ -599,7 +599,7 @@ const PaintBoard = () => {
             ) : (
               'Mint'
             )}
-          </div>
+          </button>
           <div className={styles.fee}>
             {fee !== null ? (
               <>

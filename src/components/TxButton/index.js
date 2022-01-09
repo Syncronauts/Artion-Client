@@ -17,9 +17,9 @@ const TxButton = ({ onClick, children, ...rest }) => {
   };
 
   return (
-    <div {...rest} onClick={handleClick}>
+    <button {...rest} onClick={handleClick}>
       {children}
-    </div>
+    </button>
   );
 };
 

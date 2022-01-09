@@ -12,7 +12,7 @@ import FilterActions from 'actions/filter.actions';
 import Header from 'components/header';
 
 import logo from 'assets/svgs/logo_white.svg';
-import fantomLogo from 'assets/svgs/fantom_logo_white.svg';
+// import fantomLogo from 'assets/svgs/fantom_logo_white.svg';
 import card1 from 'assets/svgs/card1.svg';
 import card2 from 'assets/svgs/card2.svg';
 import card3 from 'assets/svgs/card3.svg';
@@ -102,10 +102,10 @@ const LandingPage = () => {
       <div className={styles.body}>
         <div className={styles.main}>
           <div className={styles.mainLeft}>
-            <div
+            <h1
               className={styles.title}
               style={{ color: '#FFF' }}
-            >{`Trade without platform fees on NeonRain`}</div>
+            >{`Trade without platform fees on NeonRain`}</h1>
             <div className={styles.subtitle}>
               NeonRain is an NFT marketplace built on Ethereum. Create and trade
               NFTs instantly with low network costs.
@@ -153,7 +153,7 @@ const LandingPage = () => {
       </div>
       <div className={styles.about}>
         <div className={styles.aboutInner}>
-          <div className={styles.aboutTitle}>Why NeonRain</div>
+          <h1 className={styles.aboutTitle}>Why NeonRain</h1>
           <div className={styles.aboutCards}>
             {cards.map((card, key) =>
               renderAboutCard(
@@ -165,7 +165,7 @@ const LandingPage = () => {
               )
             )}
           </div>
-          <div className={styles.aboutTitle}>Browse by category</div>
+          <h1 className={styles.aboutTitle}>Browse by category</h1>
           <div className={styles.categories}>
             {Categories.map(cat =>
               renderCategoryCard(cat.id, cat.icon, cat.label)
@@ -200,14 +200,14 @@ const LandingPage = () => {
         >
           Terms of Service
         </a>
-        <a
+        {/* <a
           href="https://fantom.foundation/"
           target="_blank"
           rel="noopener noreferrer
             noreferrer"
         >
           <img src={fantomLogo} alt="fantom-logo" className={styles.logo} />
-        </a>
+        </a> */}
       </div>
     </div>
   );
