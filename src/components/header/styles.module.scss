@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 12px 48px 12px 24px;
+  padding: 12px 12px 12px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -52,8 +52,7 @@
     }
 
     .searchicon {
-      opacity: 1 !important;
-      color: #fff;
+      color: #ddd;
     }
   }
 }
@@ -71,8 +70,7 @@
   width: 22px;
   height: 22px;
   margin-right: 10px;
-  color: rgb(255, 255, 255);
-  opacity: 0.5;
+  color:#ddd;
 }
 
 .searchinput {
@@ -343,13 +341,13 @@
 
 @media only screen and (max-width: 768px) {
   .header {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .left {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
 
     .searchcont {
       display: none;

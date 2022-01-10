@@ -24,6 +24,8 @@ import BoostCollectionModal from 'components/BoostCollectionModal';
 import ConnectWalletModal from 'components/ConnectWalletModal';
 import Identicon from 'components/Identicon';
 
+import SideDrawer from 'components/SideDrawer';
+
 import logoSmallBlue from 'assets/svgs/logo_small_blue.svg';
 import iconUser from 'assets/svgs/user.svg';
 import iconNotification from 'assets/svgs/notification.svg';
@@ -531,32 +533,17 @@ const Header = ({ border }) => {
           <img src={logoSmallBlue} alt="logo" />
         </Link>
         {isSearchbarShown && renderSearchBox()}
-        <div className={styles.secondmenu}>
-          <NavLink
-            to="/explore"
-            className={cx(styles.menuLink, styles.link)}
-            activeClassName={styles.active}
-          >
-            Explore
-          </NavLink>
-          <NavLink
-            to="/create"
-            className={cx(styles.menuLink, styles.link)}
-            activeClassName={styles.active}
-          >
-            Create
-          </NavLink>
-        </div>
+
       </div>
       <div className={styles.menu}>
-        {isSearchbarShown && renderSearchBox()}
+        {/* {isSearchbarShown && renderSearchBox()} */}
         <NavLink
           to="/explore"
           className={cx(styles.menuLink, styles.link)}
           activeClassName={styles.active}
           style={{ color: '#fff' }}
         >
-          Explore
+          Explore1
         </NavLink>
         <NavLink
           to="/create"
@@ -564,7 +551,7 @@ const Header = ({ border }) => {
           activeClassName={styles.active}
           style={{ color: '#fff' }}
         >
-          Create
+          Create1
         </NavLink>
         {account ? (
           <div
@@ -612,6 +599,11 @@ const Header = ({ border }) => {
             Connect Wallet
           </div>
         )}
+      </div>
+      <div className={styles.secondmenu}>
+        <SideDrawer>
+          {isSearchbarShown && renderSearchBox()}
+        </SideDrawer>
       </div>
       {renderMenu}
       <WFTMModal
