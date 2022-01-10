@@ -536,14 +536,13 @@ const Header = ({ border }) => {
 
       </div>
       <div className={styles.menu}>
-        {/* {isSearchbarShown && renderSearchBox()} */}
         <NavLink
           to="/explore"
           className={cx(styles.menuLink, styles.link)}
           activeClassName={styles.active}
           style={{ color: '#fff' }}
         >
-          Explore1
+          Explore
         </NavLink>
         <NavLink
           to="/create"
@@ -551,7 +550,7 @@ const Header = ({ border }) => {
           activeClassName={styles.active}
           style={{ color: '#fff' }}
         >
-          Create1
+          Create
         </NavLink>
         {account ? (
           <div
