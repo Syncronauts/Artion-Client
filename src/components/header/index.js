@@ -25,8 +25,9 @@ import ConnectWalletModal from 'components/ConnectWalletModal';
 import Identicon from 'components/Identicon';
 
 import SideDrawer from 'components/SideDrawer';
+import Logo from 'components/Logo';
 
-import logoSmallBlue from 'assets/svgs/logo_small_blue.svg';
+// import logoSmallBlue from 'assets/svgs/logo_small_blue.svg';
 import iconUser from 'assets/svgs/user.svg';
 import iconNotification from 'assets/svgs/notification.svg';
 // import iconAdd from 'assets/svgs/add.svg';
@@ -529,8 +530,8 @@ const Header = ({ border }) => {
   return (
     <div className={cx(styles.header, border && styles.hasBorder)}>
       <div className={styles.left}>
-        <Link to="/" className={styles.logo}>
-          <img src={logoSmallBlue} alt="logo" />
+        <Link to='/' className={styles.logo}>
+          <Logo />
         </Link>
         {isSearchbarShown && renderSearchBox()}
 
