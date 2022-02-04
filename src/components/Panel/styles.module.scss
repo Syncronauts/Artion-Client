@@ -1,3 +1,9 @@
+$mainBackColor: #142233;
+$mainTextColor: #fff;
+$secondaryTextColor: #A2A2AD;
+$cardBackColor: #500f73;
+$borderColor: #005b84;
+
 .container {
   margin-bottom: -1px;
   margin-top: 1px;
@@ -25,13 +31,13 @@
   margin-right: 16px;
   width: 20px;
   height: 20px;
-  color: #121223;
+  color: $mainTextColor;
 }
 
 .title {
   font-size: 16px;
   font-weight: 700;
-  color: #121223;
+  color: $mainTextColor;
 }
 
 .icon {
