@@ -1,3 +1,5 @@
+$borderColor: #005b84;
+
 .header {
   position: fixed;
   height: 80px;
@@ -321,7 +323,7 @@
 }
 
 .hasBorder {
-  border-bottom: 1px solid #d9e1ee;
+  border-bottom: 1px solid $borderColor;
 }
 
 @media only screen and (max-width: 900px) {

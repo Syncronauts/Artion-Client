@@ -11,6 +11,7 @@ const useStyles = makeStyles(() => ({
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
     gridGap: '8px',
+    backgroundColor: '#142233',
   },
   formControl: {
     width: '100%',

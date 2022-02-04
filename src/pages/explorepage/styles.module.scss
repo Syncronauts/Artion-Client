@@ -1,16 +1,23 @@
+$mainBackColor: #142233;
+$mainTextColor: #fff;
+$cardBackColor: #500f73;
+$borderColor: #005b84;
+
 .container {
   padding-top: 80px;
   height: 100vh;
   box-sizing: border-box;
   display: flex;
   overflow-y: auto;
+  background-color: $mainBackColor;
+  color: $mainTextColor;
 }
 
 .sidebar {
   flex: 0 0 300px;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #D9E1EE;
+  border-right: 1px solid $borderColor;
   box-sizing: border-box;
   overflow-y: auto;
   overflow-x: hidden;
@@ -46,7 +53,8 @@
 .sidebarTitle {
   font-size: 20px;
   font-weight: 700;
-  color: #3D3D3D;
+  // color: #3D3D3D;
+  color: $mainTextColor;
 }
 
 .iconCollapse {
