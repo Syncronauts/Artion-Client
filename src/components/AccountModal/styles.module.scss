@@ -1,3 +1,9 @@
+$mainBackColor: #142233;
+$mainTextColor: #fff;
+$secondaryTextColor: #A2A2AD;
+$cardBackColor: #500f73;
+$borderColor: #005b84;
+
 .root {
   position: fixed;
   width: 100vw;
@@ -19,10 +25,11 @@
   padding: 40px;
   border-radius: 10px;
   box-sizing: border-box;
-  background-color: #FFF;
+  // background-color: #FFF;
+  background-color: $mainBackColor;
   outline: none;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-  color: #3D3D3D;
+  color: $mainTextColor;
 }
 
 .title {
@@ -40,7 +47,7 @@
 .formLabel {
   margin: 0 0 8px;
   font-size: 18px;
-  color: #3D3D3D;
+  color: $secondaryTextColor;
 }
 
 .formInput {
