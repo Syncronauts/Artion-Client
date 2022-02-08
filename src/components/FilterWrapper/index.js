@@ -39,9 +39,11 @@ const useStyles = makeStyles(() => ({
   },
   body: {
     padding: '32px 24px',
-    borderTop: '1px solid #213752',
+    // borderTop: '1px solid #213752',
     boxSizing: 'border-box',
-    backgroundColor: '#D9E1EE1A',
+    // backgroundColor: '#D9E1EE1A',
+    borderTop: '1px solid #11111188',
+    backgroundColor: '#1a2a3a',
   },
   statusSvgDiv: {
     display: 'flex',

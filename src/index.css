@@ -58,3 +58,8 @@ button {
   background: #1a2a3a;
   border-radius: 6px;
 }
+
+.react-loading-skeleton {
+  background-color: rgb(33 55 82) !important;
+  background-image: linear-gradient(90deg, rgb(20 34 51), rgb(33 55 82), rgb(33 55 82)) !important;
+}
