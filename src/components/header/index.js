@@ -541,7 +541,7 @@ const Header = ({ border }) => {
           to="/explore"
           className={cx(styles.menuLink, styles.link)}
           activeClassName={styles.active}
-          style={{ color: '#fff' }}
+          style={{ color: '#fff', letterSpacing: '1px' }}
         >
           Explore
         </NavLink>
@@ -549,7 +549,7 @@ const Header = ({ border }) => {
           to="/create"
           className={cx(styles.menuLink, styles.link)}
           activeClassName={styles.active}
-          style={{ color: '#fff' }}
+          style={{ color: '#fff', letterSpacing: '1px' }}
         >
           Create
         </NavLink>

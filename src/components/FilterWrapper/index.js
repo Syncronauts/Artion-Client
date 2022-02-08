@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
     marginRight: '-1px !important',
     boxShadow: 'none',
     borderRadius: '0 !important',
-    border: '1px solid #005b84',
+    border: '1px solid #213752',
     overflow: 'hidden',
     backgroundColor: '#142233',
   },
@@ -39,7 +39,7 @@ const useStyles = makeStyles(() => ({
   },
   body: {
     padding: '32px 24px',
-    borderTop: '1px solid #005b84',
+    borderTop: '1px solid #213752',
     boxSizing: 'border-box',
     backgroundColor: '#D9E1EE1A',
   },
