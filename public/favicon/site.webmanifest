@@ -1,6 +1,6 @@
 {
-    "name": "SYNC Network",
-    "short_name": "SYNC Network",
+    "name": "NeonRain",
+    "short_name": "NeonRain",
     "icons": [
         {
             "src": "/favicon/android-chrome-192x192.png?v=2",
@@ -15,6 +15,6 @@
     ],
     "theme_color": "#caddff",
     "background_color": "#caddff",
-    "start_url": "https://app.syncbond.com",
+    "start_url": "https://neonrain.com",
     "display": "standalone"
 }
