@@ -51,8 +51,8 @@ button {
   width: 4px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #090f16;
-  border-radius: 6px;
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear,left bottom,left top, color-stop(0,#24BBD0 ),color-stop(1,#505DD4));
 }
 ::-webkit-scrollbar-track {
   background: #1a2a3a;
@@ -63,3 +63,4 @@ button {
   background-color: rgb(33 55 82) !important;
   background-image: linear-gradient(90deg, rgb(20 34 51), rgb(33 55 82), rgb(33 55 82)) !important;
 }
+
