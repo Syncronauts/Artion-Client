@@ -32,7 +32,7 @@ import telegramIcon from 'assets/svgs/telegram.svg';
 import twitterIcon from 'assets/svgs/twitter.svg';
 import instagramIcon from 'assets/svgs/instagram.svg';
 import mediumIcon from 'assets/svgs/medium.svg';
-import nftIcon from 'assets/svgs/nft_black.svg';
+import nftIcon from 'assets/svgs/nft_white.svg';
 import uploadIcon from 'assets/imgs/upload.png';
 import plusIcon from 'assets/svgs/plus.svg';
 import closeIcon from 'assets/svgs/close.svg';
