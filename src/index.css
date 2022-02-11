@@ -47,16 +47,16 @@ button {
 }
 
 ::-webkit-scrollbar {
-  height: 4px;
-  width: 4px;
+  height: 5px;
+  width: 5px;
 }
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 5px;
   background-image: -webkit-gradient(linear,left bottom,left top, color-stop(0,#24BBD0 ),color-stop(1,#505DD4));
 }
 ::-webkit-scrollbar-track {
   background: #1a2a3a;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
 .react-loading-skeleton {
@@ -64,3 +64,6 @@ button {
   background-image: linear-gradient(90deg, rgb(20 34 51), rgb(33 55 82), rgb(33 55 82)) !important;
 }
 
+.MuiPaper-root {
+  background-color: #a8aae7 !important;
+}
