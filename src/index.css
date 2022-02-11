@@ -10,6 +10,7 @@
 body {
   margin: 0 !important;
   overflow: auto;
+  background-color: #142233;
 }
 .slick-slide {
   outline: none;

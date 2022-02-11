@@ -1,4 +1,3 @@
-$mainBackColor: #142233;
 $mainTextColor: #fff;
 $cardBackColor: #500f73;
 $categoryCardBackColor: #213752;
@@ -21,7 +20,6 @@ $categoryCardBackColor: #213752;
   position: relative;
   padding-top: 100px;
   z-index: 1;
-  background-color: $mainBackColor;
 }
 
 .main {
@@ -30,7 +28,6 @@ $categoryCardBackColor: #213752;
   display: flex;
   align-items: center;
   margin-bottom: 136px;
-  background-color: $mainBackColor;
 }
 
 .mainLeft {
@@ -125,7 +122,6 @@ $categoryCardBackColor: #213752;
 .about {
   width: 100%;
   // background: linear-gradient(180deg, #ffffff 0%, rgba(234, 234, 241, 0) 100%);
-  background-color: $mainBackColor;
   color: $mainTextColor;
 }
 
