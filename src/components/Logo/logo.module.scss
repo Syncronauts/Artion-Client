@@ -4,7 +4,7 @@ $color2:  #00A0B0; // teal;
 
 .wrap {  
   height:80px;
-  width: 280px;
+  width: 100px;
   overflow: hidden;
 }
 
@@ -48,6 +48,14 @@ $color2:  #00A0B0; // teal;
   &::after {
     mix-blend-mode: difference;
   }
+}
+
+.neonDesktop {
+  display: none;
+}
+
+.neonMobile {
+  display: flex;
 }
 
 // Position our two effect layers
@@ -95,4 +103,18 @@ $color2:  #00A0B0; // teal;
   margin: 0;
     transform-origin: 0 0;
   &:focus { outline: none; border: 1px dotted white; }
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    width: 300px;
+  }
+
+  .neonDesktop {
+    display: flex;
+  }
+  
+  .neonMobile {
+    display: none;
+  }
 }
