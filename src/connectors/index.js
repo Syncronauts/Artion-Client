@@ -3,7 +3,7 @@ import { InjectedConnector } from '@web3-react/injected-connector';
 import { WalletLinkConnector } from '@web3-react/walletlink-connector';
 
 import { NetworkConnector } from './NetworkConnector';
-
+import { RPC_URL } from 'constants/common';
 import NEONRAIN_LOGO_URL from '../assets/svgs/logo_blue.svg';
 
 // eslint-disable-next-line no-undef
@@ -11,12 +11,12 @@ const isMainnet = process.env.REACT_APP_ENV === 'MAINNET';
 
 const RPC = isMainnet
   ? {
-      [ChainId.FANTOM]: 'https://rpc.ftm.tools',
-      [ChainId.MAINNET]: 'https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'
+      [ChainId.FANTOM]: RPC_URL[ChainId.FANTOM],
+      [ChainId.MAINNET]: RPC_URL[ChainId.MAINNET],
     }
   : {
-      [ChainId.FANTOM_TESTNET]: 'https://rpc.testnet.fantom.network',
-      [ChainId.RINKEBY]: 'https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'
+      [ChainId.FANTOM_TESTNET]: RPC_URL[ChainId.FANTOM_TESTNET],
+      [ChainId.RINKEBY]: RPC_URL[ChainId.RINKEBY],
     };
 
 export const network = new NetworkConnector({
@@ -27,18 +27,18 @@ export const network = new NetworkConnector({
 export const injected = new InjectedConnector({
   supportedChainIds: isMainnet
     ? [
-        250, // fantom
-        1, // mainnet
+        ChainId.FANTOM, // fantom
+        ChainId.MAINNET, // mainnet
       ]
     : [
-        4002, // fantom testnet
-        4, // rinkeby
+        ChainId.FANTOM_TESTNET, // fantom testnet
+        ChainId.RINKEBY, // rinkeby
       ],
 });
 
 export const walletlink = new WalletLinkConnector({
-  url: 'https://rpc.ftm.tools', // TODO: change later
+  url: RPC_URL[ChainId.FANTOM], // TODO: change later
   appName: 'NeonRain',
   appLogoUrl: NEONRAIN_LOGO_URL,
-  supportedChainIds: [1, 4, 250, 4002],
+  supportedChainIds: [ChainId.MAINNET, ChainId.RINKEBY, ChainId.FANTOM, ChainId.FANTOM_TESTNET],
 });
