@@ -224,7 +224,7 @@ const WFTMModal = ({ visible, onClose }) => {
           <SwapVertIcon className={styles.icon} />
         </div>
         <div className={styles.swapBox}>
-          <div className={styles.symbol}>WFTM</div>
+          <div className={styles.symbol}>{WRAPPED_SYMBOL}</div>
           <div className={styles.swapBoxInner}>
             <div className={styles.balance}>
               Balance:{' '}

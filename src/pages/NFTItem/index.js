@@ -1784,12 +1784,12 @@ const NFTItem = () => {
           const toastId = showToast(
             'error',
             `Insufficient ${listing.token.symbol} Balance!`,
-            listing.token.symbol === 'WFTM'
+            listing.token.symbol === WRAPPED_SYMBOL
               ? `You can wrap ${SYMBOL} in the ${WRAPPED_SYMBOL} station.`
               : `You can exchange ${listing.token.symbol} on other exchange site.`,
             () => {
               toast.dismiss(toastId);
-              if (listing.token.symbol === 'WFTM') {
+              if (listing.token.symbol === WRAPPED_SYMBOL) {
                 dispatch(ModalActions.showWFTMModal());
               }
             }
@@ -1843,12 +1843,12 @@ const NFTItem = () => {
           const toastId = showToast(
             'error',
             `Insufficient ${token.symbol} Balance!`,
-            token.symbol === 'WFTM'
+            token.symbol === WRAPPED_SYMBOL
               ? `You can wrap ${SYMBOL} in the ${WRAPPED_SYMBOL} station.`
               : `You can exchange ${token.symbol} on other exchange site.`,
             () => {
               toast.dismiss(toastId);
-              if (token.symbol === 'WFTM') {
+              if (token.symbol === WRAPPED_SYMBOL) {
                 dispatch(ModalActions.showWFTMModal());
               }
             }
@@ -1894,13 +1894,13 @@ const NFTItem = () => {
         const toastId = showToast(
           'error',
           `Insufficient ${token.symbol} Balance!`,
-          token.symbol === 'WFTM'
+          token.symbol === WRAPPED_SYMBOL
             ? `You can wrap ${SYMBOL} in the ${WRAPPED_SYMBOL} station.`
             : `You can exchange ${token.symbol} on other exchange site.`,
           () => {
             toast.dismiss(toastId);
             setOfferModalVisible(false);
-            if (token.symbol === 'WFTM') {
+            if (token.symbol === WRAPPED_SYMBOL) {
               dispatch(ModalActions.showWFTMModal());
             }
           }
@@ -2154,7 +2154,7 @@ const NFTItem = () => {
             () => {
               toast.dismiss(toastId);
               setBidModalVisible(false);
-              if (token.symbol === 'WFTM') {
+              if (token.symbol === WRAPPED_SYMBOL) {
                 dispatch(ModalActions.showWFTMModal());
               }
             }
