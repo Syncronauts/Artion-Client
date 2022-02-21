@@ -15,6 +15,7 @@ import { shortenAddress, getRandomIPFS } from 'utils';
 import { useApi } from 'api';
 import { NETWORK_LABEL } from 'constants/networks';
 import { ADMIN_ADDRESS } from 'constants/index';
+import { SYMBOL, WRAPPED_SYMBOL } from 'constants/common';
 import WFTMModal from 'components/WFTMModal';
 import ModModal from 'components/ModModal';
 import BanCollectionModal from 'components/BanCollectionModal';
@@ -332,7 +333,7 @@ const Header = ({ border }) => {
       </div>
       <div className={styles.menuItem} onClick={openWrapStation}>
         <img src={iconSwap} className={styles.menuIcon} />
-        FTM / WFTM Station
+        {SYMBOL} / {WRAPPED_SYMBOL} Station
       </div>
 
       <div className={styles.menuSeparator} />

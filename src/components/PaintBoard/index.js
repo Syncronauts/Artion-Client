@@ -27,7 +27,7 @@ import WalletUtils from 'utils/wallet';
 import useContract from 'utils/sc.interaction';
 import { useApi } from 'api';
 import { useSalesContract, getSigner } from 'contracts';
-import { CHAIN_NAME } from 'constants/common';
+import { CHAIN_NAME, SYMBOL } from 'constants/common';
 
 import styles from './styles.module.scss';
 
@@ -229,7 +229,7 @@ const PaintBoard = () => {
     if (balance < fee) {
       showToast(
         'custom',
-        `Your balance should be at least ${fee} FTM to mint an NFT`
+        `Your balance should be at least ${fee} ${SYMBOL} to mint an NFT`
       );
       return;
     }
@@ -605,7 +605,7 @@ const PaintBoard = () => {
             {fee !== null ? (
               <>
                 <InfoIcon />
-                &nbsp;{fee} FTM are charged to create a new NFT.
+                &nbsp;{fee} {SYMBOL} are charged to create a new NFT.
               </>
             ) : (
               <Skeleton width={330} height={22} />

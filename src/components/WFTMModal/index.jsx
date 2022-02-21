@@ -14,6 +14,7 @@ import PriceInput from 'components/PriceInput';
 import showToast from 'utils/toast';
 import { formatNumber, formatError } from 'utils';
 import { useApi } from 'api';
+import { SYMBOL, WRAPPED_SYMBOL } from 'constants/common';
 
 import Modal from '../Modal';
 import styles from './styles.module.scss';
@@ -127,7 +128,7 @@ const WFTMModal = ({ visible, onClose }) => {
         await pollBalanceChange(balance, wrappedBalance);
         const toastId = showToast(
           'success',
-          'Wrapped FTM successfully!',
+          `Wrapped ${SYMBOL} successfully!`,
           '',
           () => {
             toast.dismiss(toastId);
@@ -140,7 +141,7 @@ const WFTMModal = ({ visible, onClose }) => {
         await pollBalanceChange(balance, wrappedBalance);
         const toastId = showToast(
           'success',
-          'Unwrap W-FTM successfully!',
+          `Unwrap ${WRAPPED_SYMBOL} successfully!`,
           '',
           () => {
             toast.dismiss(toastId);
@@ -161,7 +162,7 @@ const WFTMModal = ({ visible, onClose }) => {
   return (
     <Modal
       visible={visible}
-      title="FTM / WFTM Station"
+      title={`${SYMBOL} / ${WRAPPED_SYMBOL} Station`}
       onClose={onClose}
       submitDisabled={
         confirming ||
@@ -189,7 +190,7 @@ const WFTMModal = ({ visible, onClose }) => {
     >
       <div className={cx(styles.swapContainer, !wrap && styles.reverse)}>
         <div className={styles.swapBox}>
-          <div className={styles.symbol}>FTM</div>
+          <div className={styles.symbol}>{SYMBOL}</div>
           <div className={styles.swapBoxInner}>
             <div className={styles.balance}>
               Balance:{' '}

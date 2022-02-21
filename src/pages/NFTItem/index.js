@@ -65,7 +65,7 @@ import {
   getRandomIPFS,
 } from 'utils';
 import { Contracts } from 'constants/networks';
-import { CHAIN_NAME, CHAIN_ID } from 'constants/common';
+import { CHAIN_NAME, CHAIN_ID, SYMBOL, WRAPPED_SYMBOL } from 'constants/common';
 import showToast from 'utils/toast';
 import NFTCard from 'components/NFTCard';
 import TxButton from 'components/TxButton';
@@ -1785,7 +1785,7 @@ const NFTItem = () => {
             'error',
             `Insufficient ${listing.token.symbol} Balance!`,
             listing.token.symbol === 'WFTM'
-              ? 'You can wrap FTM in the WFTM station.'
+              ? `You can wrap ${SYMBOL} in the ${WRAPPED_SYMBOL} station.`
               : `You can exchange ${listing.token.symbol} on other exchange site.`,
             () => {
               toast.dismiss(toastId);
@@ -1844,7 +1844,7 @@ const NFTItem = () => {
             'error',
             `Insufficient ${token.symbol} Balance!`,
             token.symbol === 'WFTM'
-              ? 'You can wrap FTM in the WFTM station.'
+              ? `You can wrap ${SYMBOL} in the ${WRAPPED_SYMBOL} station.`
               : `You can exchange ${token.symbol} on other exchange site.`,
             () => {
               toast.dismiss(toastId);
@@ -1895,7 +1895,7 @@ const NFTItem = () => {
           'error',
           `Insufficient ${token.symbol} Balance!`,
           token.symbol === 'WFTM'
-            ? 'You can wrap FTM in the WFTM station.'
+            ? `You can wrap ${SYMBOL} in the ${WRAPPED_SYMBOL} station.`
             : `You can exchange ${token.symbol} on other exchange site.`,
           () => {
             toast.dismiss(toastId);
@@ -2148,8 +2148,8 @@ const NFTItem = () => {
           const toastId = showToast(
             'error',
             `Insufficient ${token.symbol} Balance!`,
-            token.symbol === 'WFTM'
-              ? 'You can wrap FTM in the WFTM station.'
+            token.symbol === WRAPPED_SYMBOL
+              ? `You can wrap ${SYMBOL} in the ${WRAPPED_SYMBOL} station.`
               : `You can exchange ${token.symbol} on other exchange site.`,
             () => {
               toast.dismiss(toastId);

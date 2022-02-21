@@ -8,3 +8,6 @@ export const RPC_URL = {
 }
 export const CHAIN_ID = 250;
 export const CHAIN_ID_TESTNET = 4002;
+
+export const SYMBOL = 'FTM';
+export const WRAPPED_SYMBOL = 'WFTM'
