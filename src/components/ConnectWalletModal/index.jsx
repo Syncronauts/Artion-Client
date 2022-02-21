@@ -7,6 +7,7 @@ import usePrevious from 'hooks/usePrevious';
 
 import Modal from '../Modal';
 import styles from './styles.module.scss';
+import { CHAIN_NAME, CHAIN_NAME_TESTNET } from 'constants/common';
 
 // eslint-disable-next-line no-undef
 const isMainnet = process.env.REACT_APP_ENV === 'MAINNET';
@@ -83,7 +84,7 @@ const ConnectWalletModal = ({ visible, onClose }) => {
         <div>
           <div className={styles.text}>
             Please connect to the{' '}
-            {isMainnet ? 'Fantom Opera' : 'Fantom Testnet'}.
+            {isMainnet ? CHAIN_NAME : CHAIN_NAME_TESTNET}.
           </div>
           <div className={styles.switchBtn} onClick={deactivate}>
             Disconnect

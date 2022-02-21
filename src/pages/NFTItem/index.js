@@ -65,6 +65,7 @@ import {
   getRandomIPFS,
 } from 'utils';
 import { Contracts } from 'constants/networks';
+import { CHAIN_NAME } from 'constants/common';
 import showToast from 'utils/toast';
 import NFTCard from 'components/NFTCard';
 import TxButton from 'components/TxButton';
@@ -2823,7 +2824,7 @@ const NFTItem = () => {
         </div>
         <div className={styles.panelLine}>
           <div className={styles.panelLabel}>Network</div>
-          <div className={styles.panelValue}>Fantom Opera</div>
+          <div className={styles.panelValue}>{CHAIN_NAME}</div>
         </div>
         <div className={styles.panelLine}>
           <div className={styles.panelLabel}>Chain ID</div>

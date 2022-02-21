@@ -27,6 +27,7 @@ import WalletUtils from 'utils/wallet';
 import useContract from 'utils/sc.interaction';
 import { useApi } from 'api';
 import { useSalesContract, getSigner } from 'contracts';
+import { CHAIN_NAME } from 'constants/common';
 
 import styles from './styles.module.scss';
 
@@ -220,7 +221,7 @@ const PaintBoard = () => {
       return;
     }
     if (chainId !== ChainId.FANTOM && chainId !== ChainId.FANTOM_TESTNET) {
-      showToast('info', 'You are not connected to Fantom Opera Network');
+      showToast('info', `You are not connected to ${CHAIN_NAME} Network`);
       return;
     }
     const balance = await WalletUtils.checkBalance(account);

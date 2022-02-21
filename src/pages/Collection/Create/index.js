@@ -18,6 +18,7 @@ import { ethers } from 'ethers';
 import showToast from 'utils/toast';
 
 import { Categories } from 'constants/filter.constants';
+import { CHAIN_NAME } from 'constants/common';
 import HeaderActions from 'actions/header.actions';
 import Header from 'components/header';
 import BootstrapTooltip from 'components/BootstrapTooltip';
@@ -674,7 +675,7 @@ const CollectionCreate = ({ isRegister }) => {
             <div className={styles.inputTitle}>
               Fee Recipient *&nbsp;
               <BootstrapTooltip
-                title="The nominated Fantom Opera Network wallet address to receive royalties from each sale in this collection."
+                title={`The nominated ${CHAIN_NAME} Network wallet address to receive royalties from each sale in this collection.`}
                 placement="top"
               >
                 <HelpOutlineIcon />
