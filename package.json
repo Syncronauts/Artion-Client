@@ -1,6 +1,5 @@
 {
-  "name": "paint",
-  "homepage": "https://youngmanalive.github.io",
+  "name": "neonrain-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,8 +15,11 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "@material-ui/styles": "^4.11.3",
-    "@sushiswap/sdk": "*",
+    "@sushiswap/sdk": "5.0.0-canary.6",
     "@svgr/webpack": "4.3.2",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
     "@typescript-eslint/eslint-plugin": "1.13.0",
     "@typescript-eslint/parser": "1.13.0",
     "@web3-react/core": "^6.1.9",
@@ -39,7 +41,6 @@
     "erc721": "^5.2.0",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^7.2.0",
-    "eslint-config-react-app": "^5.0.0",
     "eslint-loader": "2.2.1",
     "eslint-plugin-flowtype": "3.13.0",
     "eslint-plugin-import": "2.18.2",
@@ -81,14 +82,14 @@
     "postcss-safe-parser": "4.0.1",
     "prettier": "^1.19.1",
     "radiance-ui": "^4.2.1",
-    "react": "^16.9.0",
+    "react": "^17.0.2",
     "react-app-polyfill": "^1.0.2",
     "react-app-rewired": "^2.1.8",
     "react-copy-to-clipboard": "^5.0.3",
     "react-datetime": "^3.0.4",
     "react-dev-utils": "^9.0.2",
     "react-device-detect": "^1.17.0",
-    "react-dom": "^16.9.0",
+    "react-dom": "^17.0.2",
     "react-dropdown-select": "^4.7.4",
     "react-dropzone": "^11.3.2",
     "react-hot-toast": "^1.0.2",
@@ -100,7 +101,7 @@
     "react-redux": "^7.2.2",
     "react-resize-detector": "^6.7.4",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.2",
+    "react-scripts": "5.0.0",
     "react-spinners": "^0.10.6",
     "react-virtualized": "9.21.2",
     "react-virtualized-auto-sizer": "1.0.2",
@@ -120,17 +121,17 @@
     "ts-pnp": "1.1.2",
     "ua-parser-js": "^0.7.20",
     "url-loader": "2.1.0",
+    "web-vitals": "^2.1.4",
     "webpack": "4.39.1",
     "webpack-dev-server": "3.2.1",
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
@@ -144,72 +145,16 @@
       "last 1 safari version"
     ]
   },
-  "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
-    ],
-    "setupFiles": [
-      "react-app-polyfill/jsdom"
-    ],
-    "setupFilesAfterEnv": [],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
-    ],
-    "testEnvironment": "jest-environment-jsdom-fourteen",
-    "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ],
-    "modulePaths": [],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "web.ts",
-      "ts",
-      "web.tsx",
-      "tsx",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ],
-    "watchPlugins": [
-      "jest-watch-typeahead/filename",
-      "jest-watch-typeahead/testname"
-    ]
-  },
-  "babel": {
-    "plugins": [
-      [
-        "@babel/plugin-proposal-decorators",
-        {
-          "legacy": true
-        }
-      ]
-    ],
-    "presets": [
-      "react-app"
+  "eslintConfig": {
+    "extends": [],
+    "ignorePatterns": [
+      "node_modules",
+      "src"
     ]
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "@babel/plugin-proposal-decorators": "^7.12.1",
-    "babel-eslint": "^10.0.2",
     "babel-plugin-transform-decorators-legacy": "^1.3.5"
-  },
-  "keywords": [],
-  "description": ""
+  }
 }

@@ -31,7 +31,7 @@ import CollectionsActions from 'actions/collections.actions';
 import iconCopy from 'assets/svgs/copy.svg';
 import iconSettings from 'assets/svgs/settings.svg';
 import iconShare from 'assets/svgs/share.svg';
-import iconArtion from 'assets/svgs/logo_small_blue.svg';
+import iconNeonRain from 'assets/svgs/logo_sync.svg';
 import iconFacebook from 'assets/imgs/facebook.png';
 import iconTwitter from 'assets/svgs/twitter_blue.svg';
 import IconList from 'assets/icons/iconList';
@@ -1130,7 +1130,7 @@ const AccountDetails = () => {
       >
         <CopyToClipboard text={window.location.href} onCopy={handleCopyLink}>
           <MenuItem classes={{ root: styles.menuItem }}>
-            <img src={iconArtion} />
+            <img src={iconNeonRain} />
             Copy Link
           </MenuItem>
         </CopyToClipboard>

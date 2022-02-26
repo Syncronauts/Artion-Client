@@ -1,3 +1,9 @@
+$mainBackColor: #142233;
+$mainTextColor: #fff;
+$secondaryTextColor: #A2A2AD;
+$cardBackColor: #500f73;
+$borderColor: #213752;
+
 .container {
   position: relative;
   width: 100%;
@@ -8,6 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: $mainBackColor;
 }
 
 .header {
@@ -28,7 +35,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #007BFF;
+  // background-color: #007BFF;
+  background: linear-gradient(187deg, #1969FF, #505DD4);
   color: #FFF;
   cursor: pointer;
   font-weight: 700;
@@ -222,7 +230,8 @@
   font-weight: 700;
   font-size: 32px;
   line-height: 32px;
-  color: #3D3D3D;
+  // color: #3D3D3D;
+  color: $mainTextColor;
   margin-top: 16px;
   margin-right: 110px;
   overflow: hidden;
@@ -234,7 +243,8 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
-  color: rgba(0, 0, 0, .6);
+  // color: rgba(0, 0, 0, .6);
+  color: $mainTextColor;
   margin-top: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -315,6 +325,7 @@
   width: 100%;
   padding: 24px;
   box-sizing: border-box;
+  color: $secondaryTextColor;
 }
 
 .panelLine {
@@ -346,7 +357,7 @@
   align-items: center;
   font-size: 14px;
   font-weight: 400;
-  color: #121223;
+  color: $secondaryTextColor;
 }
 
 .items {
@@ -420,7 +431,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #2479FA;
+  // background-color: #2479FA;
+  background: linear-gradient(187deg, #1969FF, #505DD4);
   font-size: 16px;
   font-weight: 700;
   color: #FFF;
@@ -428,7 +440,7 @@
 }
 
 .heading {
-  background-color: #F6F7F9;
+  // background-color: #F6F7F9;
 }
 
 .owner {
@@ -496,7 +508,8 @@
   justify-content: center;
   border-radius: 8px;
   color: #FFF;
-  background-color: #2479FA;
+  // background-color: #2479FA;
+  background: linear-gradient(187deg, #1969FF, #505DD4);
   font-weight: 700;
   font-size: 18px;
   cursor: pointer;
@@ -557,7 +570,8 @@
 }
 
 .placeBid {
-  background-color: #007BFF;
+  // background-color: #007BFF;
+  background: linear-gradient(187deg, #1969FF, #505DD4);
   color: #FFF;
 }
 
@@ -580,7 +594,7 @@
 .tradeHistoryTitle {
   font-weight: 700;
   font-size: 16px;
-  color: #121223;
+  color: $secondaryTextColor;
 }
 
 .filter {
@@ -590,6 +604,7 @@
 .filterIcon {
   width: 20px;
   height: 20px;
+  color: $mainTextColor;
 }
 
 .histories {
@@ -607,7 +622,7 @@
   padding: 0 14px;
   font-size: 14px;
   font-weight: 400;
-  color: #121223;
+  color: $secondaryTextColor;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
 
   &.heading {
@@ -709,7 +724,7 @@
   align-items: center;
   font-size: 14px;
   font-weight: 400;
-  color: #121223;
+  color: $secondaryTextColor;
 
   img {
     width: 20px;
@@ -733,7 +748,7 @@
 .unlockableLabel {
   font-weight: 500;
   font-size: 18px;
-  color: #121223;
+  color: $secondaryTextColor;
 }
 
 .unlockableContent {
@@ -784,7 +799,7 @@
 .currentPrice {
   font-weight: 700;
   font-size: 28px;
-  color: #121223;
+  color: $secondaryTextColor;
   margin-right: 8px;
 }
 
@@ -800,7 +815,8 @@
   width: 100%;
   height: 48px;
   border-radius: 10px;
-  background-color: #2479FA;
+  // background-color: #2479FA;
+  background: linear-gradient(187deg, #1969FF, #505DD4);
   font-weight: 700;
   font-size: 16px;
   color: #FFF;

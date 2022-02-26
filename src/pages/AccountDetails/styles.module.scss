@@ -1,3 +1,9 @@
+$mainBackColor: #142233;
+$mainTextColor: #fff;
+$secondaryTextColor: #A2A2AD;
+$cardBackColor: #500f73;
+$borderColor: #213752;
+
 .container {
   width: 100%;
   height: 100vh;
@@ -7,6 +13,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  background-color: $mainBackColor;
 }
 
 .profile {
@@ -121,7 +128,7 @@
 .username {
   font-size: 32px;
   font-weight: 700;
-  color: #121223;
+  color: $mainTextColor;
 }
 
 .followBtn {
@@ -129,7 +136,8 @@
   width: 80px;
   height: 26px;
   border-radius: 4px;
-  background-color: #2479FA;
+  // background-color: #2479FA;
+  background: linear-gradient(187deg, #1969FF, #505DD4);
   color: #FFF;
   font-size: 14px;
   display: flex;
@@ -188,7 +196,8 @@
   margin-left: 56px;
   font-size: 16px;
   font-weight: 400;
-  color: #121223;
+  // color: #121223;
+  color: $mainTextColor;
   cursor: pointer;
 }
 
@@ -306,7 +315,8 @@
 .activityHeader {
   width: 100%;
   padding: 9px 14px;
-  background-color: #F6F7F9;
+  background-color: $borderColor;
+  color: #fff;
 }
 
 .activity {

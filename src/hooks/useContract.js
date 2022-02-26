@@ -1,6 +1,7 @@
 import { useCallback } from 'react';
 import { ethers } from 'ethers';
 import { useWeb3React } from '@web3-react/core';
+import { RPC_URL, CHAIN_ID, CHAIN_ID_TESTNET } from 'constants/common';
 
 // eslint-disable-next-line no-undef
 const isMainnet = process.env.REACT_APP_ENV === 'MAINNET';
@@ -19,9 +20,9 @@ export default () => {
       } else {
         const provider = new ethers.providers.JsonRpcProvider(
           isMainnet
-            ? 'https://rpc.ftm.tools/'
-            : 'https://rpc.testnet.fantom.network/',
-          isMainnet ? 250 : 4002
+            ? RPC_URL[CHAIN_ID]
+            : RPC_URL[CHAIN_ID_TESTNET],
+          isMainnet ? CHAIN_ID : CHAIN_ID_TESTNET
         );
 
         return new ethers.Contract(address, abi, provider);
