@@ -18,6 +18,7 @@ import { ethers } from 'ethers';
 import showToast from 'utils/toast';
 
 import { Categories } from 'constants/filter.constants';
+import { CHAIN_NAME } from 'constants/common';
 import HeaderActions from 'actions/header.actions';
 import Header from 'components/header';
 import BootstrapTooltip from 'components/BootstrapTooltip';
@@ -32,7 +33,7 @@ import telegramIcon from 'assets/svgs/telegram.svg';
 import twitterIcon from 'assets/svgs/twitter.svg';
 import instagramIcon from 'assets/svgs/instagram.svg';
 import mediumIcon from 'assets/svgs/medium.svg';
-import nftIcon from 'assets/svgs/nft_black.svg';
+import nftIcon from 'assets/svgs/nft_white.svg';
 import uploadIcon from 'assets/imgs/upload.png';
 import plusIcon from 'assets/svgs/plus.svg';
 import closeIcon from 'assets/svgs/close.svg';
@@ -674,7 +675,7 @@ const CollectionCreate = ({ isRegister }) => {
             <div className={styles.inputTitle}>
               Fee Recipient *&nbsp;
               <BootstrapTooltip
-                title="The nominated Fantom Opera Network wallet address to receive royalties from each sale in this collection."
+                title={`The nominated ${CHAIN_NAME} Network wallet address to receive royalties from each sale in this collection.`}
                 placement="top"
               >
                 <HelpOutlineIcon />

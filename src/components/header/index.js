@@ -15,6 +15,7 @@ import { shortenAddress, getRandomIPFS } from 'utils';
 import { useApi } from 'api';
 import { NETWORK_LABEL } from 'constants/networks';
 import { ADMIN_ADDRESS } from 'constants/index';
+import { SYMBOL, WRAPPED_SYMBOL } from 'constants/common';
 import WFTMModal from 'components/WFTMModal';
 import ModModal from 'components/ModModal';
 import BanCollectionModal from 'components/BanCollectionModal';
@@ -24,7 +25,10 @@ import BoostCollectionModal from 'components/BoostCollectionModal';
 import ConnectWalletModal from 'components/ConnectWalletModal';
 import Identicon from 'components/Identicon';
 
-import logoSmallBlue from 'assets/svgs/logo_small_blue.svg';
+import SideDrawer from 'components/SideDrawer';
+import Logo from 'components/Logo';
+
+// import logoSmallBlue from 'assets/svgs/logo_small_blue.svg';
 import iconUser from 'assets/svgs/user.svg';
 import iconNotification from 'assets/svgs/notification.svg';
 // import iconAdd from 'assets/svgs/add.svg';
@@ -329,7 +333,7 @@ const Header = ({ border }) => {
       </div>
       <div className={styles.menuItem} onClick={openWrapStation}>
         <img src={iconSwap} className={styles.menuIcon} />
-        FTM / WFTM Station
+        {SYMBOL} / {WRAPPED_SYMBOL} Station
       </div>
 
       <div className={styles.menuSeparator} />
@@ -527,34 +531,18 @@ const Header = ({ border }) => {
   return (
     <div className={cx(styles.header, border && styles.hasBorder)}>
       <div className={styles.left}>
-        <Link to="/" className={styles.logo}>
-          <img src={logoSmallBlue} alt="logo" />
+        <Link to='/' className={styles.logo}>
+          <Logo />
         </Link>
         {isSearchbarShown && renderSearchBox()}
-        <div className={styles.secondmenu}>
-          <NavLink
-            to="/explore"
-            className={cx(styles.menuLink, styles.link)}
-            activeClassName={styles.active}
-          >
-            Explore
-          </NavLink>
-          <NavLink
-            to="/create"
-            className={cx(styles.menuLink, styles.link)}
-            activeClassName={styles.active}
-          >
-            Create
-          </NavLink>
-        </div>
+
       </div>
       <div className={styles.menu}>
-        {isSearchbarShown && renderSearchBox()}
         <NavLink
           to="/explore"
           className={cx(styles.menuLink, styles.link)}
           activeClassName={styles.active}
-          style={{ color: '#fff' }}
+          style={{ color: '#fff', letterSpacing: '1px' }}
         >
           Explore
         </NavLink>
@@ -562,7 +550,7 @@ const Header = ({ border }) => {
           to="/create"
           className={cx(styles.menuLink, styles.link)}
           activeClassName={styles.active}
-          style={{ color: '#fff' }}
+          style={{ color: '#fff', letterSpacing: '1px' }}
         >
           Create
         </NavLink>
@@ -612,6 +600,11 @@ const Header = ({ border }) => {
             Connect Wallet
           </div>
         )}
+      </div>
+      <div className={styles.secondmenu}>
+        <SideDrawer>
+          {isSearchbarShown && renderSearchBox()}
+        </SideDrawer>
       </div>
       {renderMenu}
       <WFTMModal

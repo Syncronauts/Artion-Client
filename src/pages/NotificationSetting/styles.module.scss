@@ -1,3 +1,5 @@
+$mainTextColor: #fff;
+
 .container {
   width: 100%;
   height: 100vh;
@@ -19,7 +21,7 @@
   font-size: 32px;
   line-height: 39px;
   letter-spacing: -0.02em;
-  color: #121223;
+  color: $mainTextColor;
 }
 
 .body {
@@ -31,7 +33,8 @@
   width: 448px;
   flex: 0 0 448px;
   margin-right: 120px;
-  color: #121223;
+  // color: #121223;
+  color: $mainTextColor;
 
   &:last-child {
     margin-right: 0;

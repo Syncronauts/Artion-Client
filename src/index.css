@@ -10,6 +10,7 @@
 body {
   margin: 0 !important;
   overflow: auto;
+  background-color: #142233;
 }
 .slick-slide {
   outline: none;
@@ -18,28 +19,52 @@ body {
 }
 
 body * {
-  font-family: 'proxima-nova' !important;
+  font-family: 'Montserrat' !important;
 }
 
-/* width */
+h1,h2,h3,h4,h5,h6,a,button {
+  font-family: 'Poppins' !important;
+}
+
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 21px;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  height: 5px;
+  width: 5px;
 }
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 6px;
-}
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 6px;
+  border-radius: 5px;
+  background-image: -webkit-gradient(linear,left bottom,left top, color-stop(0,#24BBD0 ),color-stop(1,#505DD4));
+}
+::-webkit-scrollbar-track {
+  background: #1a2a3a;
+  border-radius: 5px;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.react-loading-skeleton {
+  background-color: rgb(33 55 82) !important;
+  background-image: linear-gradient(90deg, rgb(20 34 51), rgb(33 55 82), rgb(33 55 82)) !important;
+}
+
+.MuiPaper-root {
+  background-color: #a8aae7 !important;
 }

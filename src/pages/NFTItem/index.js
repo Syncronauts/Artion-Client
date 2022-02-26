@@ -65,6 +65,7 @@ import {
   getRandomIPFS,
 } from 'utils';
 import { Contracts } from 'constants/networks';
+import { CHAIN_NAME, CHAIN_ID, SYMBOL, WRAPPED_SYMBOL } from 'constants/common';
 import showToast from 'utils/toast';
 import NFTCard from 'components/NFTCard';
 import TxButton from 'components/TxButton';
@@ -91,7 +92,7 @@ import mediumIcon from 'assets/svgs/medium.svg';
 import filterIcon from 'assets/svgs/filter.svg';
 import checkIcon from 'assets/svgs/check.svg';
 import shareIcon from 'assets/svgs/share.svg';
-import iconArtion from 'assets/svgs/logo_small_blue.svg';
+import iconNeonRain from 'assets/svgs/logo_sync.svg';
 import iconFacebook from 'assets/imgs/facebook.png';
 import iconTwitter from 'assets/svgs/twitter_blue.svg';
 
@@ -1783,12 +1784,12 @@ const NFTItem = () => {
           const toastId = showToast(
             'error',
             `Insufficient ${listing.token.symbol} Balance!`,
-            listing.token.symbol === 'WFTM'
-              ? 'You can wrap FTM in the WFTM station.'
+            listing.token.symbol === WRAPPED_SYMBOL
+              ? `You can wrap ${SYMBOL} in the ${WRAPPED_SYMBOL} station.`
               : `You can exchange ${listing.token.symbol} on other exchange site.`,
             () => {
               toast.dismiss(toastId);
-              if (listing.token.symbol === 'WFTM') {
+              if (listing.token.symbol === WRAPPED_SYMBOL) {
                 dispatch(ModalActions.showWFTMModal());
               }
             }
@@ -1842,12 +1843,12 @@ const NFTItem = () => {
           const toastId = showToast(
             'error',
             `Insufficient ${token.symbol} Balance!`,
-            token.symbol === 'WFTM'
-              ? 'You can wrap FTM in the WFTM station.'
+            token.symbol === WRAPPED_SYMBOL
+              ? `You can wrap ${SYMBOL} in the ${WRAPPED_SYMBOL} station.`
               : `You can exchange ${token.symbol} on other exchange site.`,
             () => {
               toast.dismiss(toastId);
-              if (token.symbol === 'WFTM') {
+              if (token.symbol === WRAPPED_SYMBOL) {
                 dispatch(ModalActions.showWFTMModal());
               }
             }
@@ -1893,13 +1894,13 @@ const NFTItem = () => {
         const toastId = showToast(
           'error',
           `Insufficient ${token.symbol} Balance!`,
-          token.symbol === 'WFTM'
-            ? 'You can wrap FTM in the WFTM station.'
+          token.symbol === WRAPPED_SYMBOL
+            ? `You can wrap ${SYMBOL} in the ${WRAPPED_SYMBOL} station.`
             : `You can exchange ${token.symbol} on other exchange site.`,
           () => {
             toast.dismiss(toastId);
             setOfferModalVisible(false);
-            if (token.symbol === 'WFTM') {
+            if (token.symbol === WRAPPED_SYMBOL) {
               dispatch(ModalActions.showWFTMModal());
             }
           }
@@ -2147,13 +2148,13 @@ const NFTItem = () => {
           const toastId = showToast(
             'error',
             `Insufficient ${token.symbol} Balance!`,
-            token.symbol === 'WFTM'
-              ? 'You can wrap FTM in the WFTM station.'
+            token.symbol === WRAPPED_SYMBOL
+              ? `You can wrap ${SYMBOL} in the ${WRAPPED_SYMBOL} station.`
               : `You can exchange ${token.symbol} on other exchange site.`,
             () => {
               toast.dismiss(toastId);
               setBidModalVisible(false);
-              if (token.symbol === 'WFTM') {
+              if (token.symbol === WRAPPED_SYMBOL) {
                 dispatch(ModalActions.showWFTMModal());
               }
             }
@@ -2823,11 +2824,11 @@ const NFTItem = () => {
         </div>
         <div className={styles.panelLine}>
           <div className={styles.panelLabel}>Network</div>
-          <div className={styles.panelValue}>Fantom Opera</div>
+          <div className={styles.panelValue}>{CHAIN_NAME}</div>
         </div>
         <div className={styles.panelLine}>
           <div className={styles.panelLabel}>Chain ID</div>
-          <div className={styles.panelValue}>250</div>
+          <div className={styles.panelValue}>{CHAIN_ID}</div>
         </div>
       </div>
     </Panel>
@@ -3708,7 +3709,7 @@ const NFTItem = () => {
       >
         <CopyToClipboard text={window.location.href} onCopy={handleCopyLink}>
           <MenuItem classes={{ root: styles.menuItem }}>
-            <img src={iconArtion} />
+            <img src={iconNeonRain} />
             Copy Link
           </MenuItem>
         </CopyToClipboard>

@@ -83,7 +83,7 @@ const useStyles = makeStyles(() => ({
   name: {
     fontWeight: 700,
     fontSize: 16,
-    color: '#000',
+    color: '#fff',
     opacity: 0.6,
     marginRight: 4,
   },

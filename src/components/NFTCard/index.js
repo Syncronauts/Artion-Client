@@ -10,6 +10,7 @@ import {
   CheckCircle as CheckCircleIcon,
 } from '@material-ui/icons';
 import Loader from 'react-loader-spinner';
+import { ChainId } from '@sushiswap/sdk';
 import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import axios from 'axios';
@@ -21,9 +22,11 @@ import { formatNumber, getRandomIPFS } from 'utils';
 import { useApi } from 'api';
 import { useAuctionContract } from 'contracts';
 import useTokens from 'hooks/useTokens';
+import { CHAIN_ID } from 'constants/common';
 
 import iconPlus from 'assets/svgs/plus.svg';
 import wFTMLogo from 'assets/imgs/wftm.png';
+import wETHLogo from 'assets/imgs/weth.png';
 
 import styles from './styles.module.scss';
 
@@ -362,7 +365,7 @@ const BaseCard = ({ item, loading, style, create, onCreate, onLike }) => {
                         auctionActive
                           ? auction?.token?.icon
                           : getTokenByAddress(item?.paymentToken)?.icon ||
-                            wFTMLogo
+                            [ChainId.MAINNET, ChainId.RINKEBY].includes(CHAIN_ID) ? wETHLogo: wFTMLogo
                       }
                     />
                     {formatNumber(

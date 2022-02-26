@@ -116,7 +116,7 @@ const CollectionCreate = () => {
       <Header border />
       {loading ? (
         <div className={styles.loadingPanel}>
-          <ClipLoader color="#3D3D3D" size={40} />
+          <ClipLoader color="#fff" size={40} />
         </div>
       ) : index === null ? (
         <div className={styles.inner}>

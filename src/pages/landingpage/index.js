@@ -10,9 +10,10 @@ import { Categories } from 'constants/filter.constants';
 import HeaderActions from 'actions/header.actions';
 import FilterActions from 'actions/filter.actions';
 import Header from 'components/header';
+import Logo from 'components/Logo';
 
-import logo from 'assets/svgs/logo_white.svg';
-import fantomLogo from 'assets/svgs/fantom_logo_white.svg';
+// import logo from 'assets/svgs/logo_white.svg';
+// import fantomLogo from 'assets/svgs/fantom_logo_white.svg';
 import card1 from 'assets/svgs/card1.svg';
 import card2 from 'assets/svgs/card2.svg';
 import card3 from 'assets/svgs/card3.svg';
@@ -33,7 +34,7 @@ const cards = [
     icon: card2,
     title: 'Super Fast',
     description:
-      'Since Artion runs on the Fantom Opera Network, transactions are usually confirmed within 1-2 seconds.',
+      'Since NeonRain runs on the Ethereum Network, transactions are usually confirmed within a few seconds.',
     path: '/',
   },
   {
@@ -47,7 +48,7 @@ const cards = [
     icon: card4,
     title: 'Zero Platform Fees',
     description:
-      'Trade NFTs via auction or direct offer without any fees taken by Artion.',
+      'Trade NFTs via auction or direct offer without any fees taken by NeonRain.',
     path: '/explore',
   },
 ];
@@ -102,12 +103,12 @@ const LandingPage = () => {
       <div className={styles.body}>
         <div className={styles.main}>
           <div className={styles.mainLeft}>
-            <div
+            <h1
               className={styles.title}
               style={{ color: '#FFF' }}
-            >{`Trade without platform fees on Artion`}</div>
+            >{`Trade without platform fees on NeonRain`}</h1>
             <div className={styles.subtitle}>
-              Artion is an NFT marketplace built on Fantom. Create and trade
+              NeonRain is an NFT marketplace built on Ethereum. Create and trade
               NFTs instantly with low network costs.
             </div>
             <div className={styles.subtitle}>
@@ -153,7 +154,7 @@ const LandingPage = () => {
       </div>
       <div className={styles.about}>
         <div className={styles.aboutInner}>
-          <div className={styles.aboutTitle}>Why Artion</div>
+          <h1 className={styles.aboutTitle}>Why NeonRain</h1>
           <div className={styles.aboutCards}>
             {cards.map((card, key) =>
               renderAboutCard(
@@ -165,7 +166,7 @@ const LandingPage = () => {
               )
             )}
           </div>
-          <div className={styles.aboutTitle}>Browse by category</div>
+          <h1 className={styles.aboutTitle}>Browse by category</h1>
           <div className={styles.categories}>
             {Categories.map(cat =>
               renderCategoryCard(cat.id, cat.icon, cat.label)
@@ -175,7 +176,8 @@ const LandingPage = () => {
         </div>
       </div>
       <div className={styles.footer}>
-        <img src={logo} alt="logo" className={styles.logo} />
+        <Logo />
+        {/* <img src={logo} alt="logo" className={styles.logo} /> */}
         <a
           style={{ textDecoration: 'none', color: '#FFFFFF' }}
           target="_blank"
@@ -200,14 +202,14 @@ const LandingPage = () => {
         >
           Terms of Service
         </a>
-        <a
+        {/* <a
           href="https://fantom.foundation/"
           target="_blank"
           rel="noopener noreferrer
             noreferrer"
         >
           <img src={fantomLogo} alt="fantom-logo" className={styles.logo} />
-        </a>
+        </a> */}
       </div>
     </div>
   );

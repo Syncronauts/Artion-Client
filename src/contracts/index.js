@@ -5,6 +5,7 @@ export * from './auctions';
 export * from './sales';
 export * from './bundleSales';
 export * from './token';
+// TODO: check later for weth
 export * from './wftm';
 export * from './factory';
 

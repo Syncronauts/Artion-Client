@@ -27,6 +27,7 @@ import WalletUtils from 'utils/wallet';
 import useContract from 'utils/sc.interaction';
 import { useApi } from 'api';
 import { useSalesContract, getSigner } from 'contracts';
+import { CHAIN_NAME, SYMBOL } from 'constants/common';
 
 import styles from './styles.module.scss';
 
@@ -220,7 +221,7 @@ const PaintBoard = () => {
       return;
     }
     if (chainId !== ChainId.FANTOM && chainId !== ChainId.FANTOM_TESTNET) {
-      showToast('info', 'You are not connected to Fantom Opera Network');
+      showToast('info', `You are not connected to ${CHAIN_NAME} Network`);
       return;
     }
     const balance = await WalletUtils.checkBalance(account);
@@ -228,7 +229,7 @@ const PaintBoard = () => {
     if (balance < fee) {
       showToast(
         'custom',
-        `Your balance should be at least ${fee} FTM to mint an NFT`
+        `Your balance should be at least ${fee} ${SYMBOL} to mint an NFT`
       );
       return;
     }
@@ -585,7 +586,7 @@ const PaintBoard = () => {
               </Stepper>
             </div>
           )}
-          <div
+          <button
             className={cx(
               styles.button,
               (isMinting || !account || !validateMetadata()) && styles.disabled
@@ -599,12 +600,12 @@ const PaintBoard = () => {
             ) : (
               'Mint'
             )}
-          </div>
+          </button>
           <div className={styles.fee}>
             {fee !== null ? (
               <>
                 <InfoIcon />
-                &nbsp;{fee} FTM are charged to create a new NFT.
+                &nbsp;{fee} {SYMBOL} are charged to create a new NFT.
               </>
             ) : (
               <Skeleton width={330} height={22} />
